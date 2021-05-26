@@ -1,0 +1,293 @@
+#artwork {
+  margin: 0;
+  height: 430px;
+  width: 430px;
+  position: relative;
+  overflow: hidden;
+}
+
+#artwork #art-woman {
+  width: 80%;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  top: 5%;
+  left: -50px;
+}
+
+#artwork #art-pattern {
+  position: absolute;
+  width: 140%;
+  top: -20%;
+  left: -50%;
+}
+
+@media screen and (max-width: 768px) {
+  /* For mobile phones: */
+  #artwork {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  #artwork #art-woman {
+    width: 80%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 20%;
+  }
+  #artwork #art-pattern {
+    position: absolute;
+    width: 80%;
+    top: -10%;
+    left: 20%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  /* For mobile phones: */
+  #artwork {
+    width: auto;
+  }
+  #artwork #art-woman {
+    width: 80%;
+    position: absolute;
+    z-index: 1;
+    top: 15%;
+    left: 20%;
+  }
+  #artwork #art-pattern {
+    position: absolute;
+    width: 80%;
+    top: 10%;
+    left: 20%;
+  }
+}
+
+#design-container {
+  padding: 0;
+  margin: 0;
+  width: auto;
+  height: auto;
+  display: inline;
+  overflow: hidden;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  /* For ipad phones: */
+  #design-container {
+    padding: 0;
+    margin: 0;
+    width: auto;
+    height: auto;
+    width: 100%;
+    position: relative;
+    bottom: 30%;
+    left: -10%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  /* For mobile phones: */
+  #design-container {
+    padding: 0;
+    margin: 0;
+    width: auto;
+    height: auto;
+    width: 100%;
+    position: relative;
+    bottom: 33%;
+    left: -10%;
+  }
+}
+
+.question,
+.text {
+  font-family: 'Kumbh Sans', sans-serif;
+  color: #4a4b5e;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.question:focus,
+.question:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-weight: 700;
+  color: #1d1e35;
+  background-color: inherit !important;
+}
+
+.question:hover {
+  color: #f47c57;
+}
+
+.accordion-button::after {
+  display: block;
+  background-size: 10px;
+  background-image: url("../images/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: center;
+}
+
+.accordion-button[aria-expanded="true"]::after {
+  display: block;
+  background-size: 10px;
+  background-image: url("../images/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: center;
+}
+
+#faq-container {
+  margin: 40px auto;
+  display: inline;
+  width: 40%;
+}
+
+#header {
+  font-family: 'Kumbh Sans', sans-serif;
+  color: #1d1e35;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  /* For tablet : */
+  #faq-container {
+    margin-top: 30%;
+    margin-left: 10%;
+    padding: 10px;
+    width: 80%;
+    position: absolute;
+  }
+  .question,
+  .text {
+    font-family: 'Kumbh Sans', sans-serif;
+    color: #4a4b5e;
+    font-size: 12px;
+    font-weight: 400;
+    font-size: 20px;
+  }
+  #header {
+    font-size: 25px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  /* For mobile phones: */
+  #faq-container {
+    width: 100%;
+    margin: 0;
+    margin-top: 30%;
+  }
+  .question,
+  .text {
+    font-family: 'Kumbh Sans', sans-serif;
+    color: #4a4b5e;
+    font-size: 12px;
+    font-weight: 400;
+    font-size: 15px;
+  }
+  #header {
+    font-size: 25px;
+    text-align: center;
+  }
+}
+
+#card-container {
+  margin: 15% auto;
+  position: relative;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 25px;
+  width: 60%;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  /* For mobile phones: */
+  #card-container {
+    margin: 40% auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90vw;
+    height: 80vh;
+    margin: 40% auto;
+    position: relative;
+    background-color: white;
+    border-radius: 25px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  /* For mobile phones: */
+  #card-container {
+    margin: 40% auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90vw;
+    height: 80vh;
+    margin: 40% auto;
+    position: relative;
+    background-color: white;
+    border-radius: 25px;
+  }
+}
+
+#art-box {
+  width: 20%;
+  position: absolute;
+  left: -80px;
+  z-index: 2;
+  top: 160px;
+}
+
+@media screen and (max-width: 768px) {
+  /* For mobile phones: */
+  #art-box {
+    width: 40%;
+    left: 5%;
+    top: -15%;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  /* For mobile phones: */
+  #art-box {
+    width: 40%;
+    position: absolute;
+    left: 25px;
+    z-index: 2;
+    top: -50px;
+  }
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  background: -webkit-gradient(linear, left bottom, left top, from(#6565e7), to(#af67e9));
+  background: linear-gradient(to top, #6565e7, #af67e9);
+}
+
+@media screen and (max-width: 375px) {
+  /* For mobile phones: */
+  body {
+    background: -webkit-gradient(linear, left bottom, left top, from(#6565e7), to(#af67e9));
+    background: linear-gradient(to top, #6565e7, #af67e9);
+  }
+}
+/*# sourceMappingURL=styles.css.map */

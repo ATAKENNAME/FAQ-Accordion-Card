@@ -1,0 +1,96 @@
+
+////default styles
+
+@mixin artWorkBoxSize {
+    margin:0;
+    height:430px;
+    width: 430px;
+}
+
+@mixin artWoman{
+    width: 80%;
+    position:absolute;
+    z-index: 1;
+}
+
+@mixin artPattern {
+    position:absolute;
+}
+
+///desktop view
+#artwork{
+    @include artWorkBoxSize();
+    position:relative;
+    overflow: hidden;
+    
+    #art-woman{
+        @include artWoman();
+        width:100%;
+        top:5%;
+        left:-50px;
+        
+    }
+
+    #art-pattern{
+        @include artPattern();
+        width:140%;
+        top:-20%;
+        left:-50%;
+
+    }
+}
+
+////tablet view 
+@media  screen and (max-width: 768px) {
+    /* For mobile phones: */
+
+
+    #artwork{
+        width: 100%;
+        height: 100%;
+        position:relative;
+     
+        
+        #art-woman{
+            @include artWoman();
+            top:0;
+            left:20%;
+            
+        }
+    
+        #art-pattern{
+            @include artPattern();
+            width:80%;
+            top:-10%;
+            left:20%;
+    
+        }
+    }
+
+  }
+
+  /// mobile phone view
+
+  @media screen and (max-width: 375px) {
+    /* For mobile phones: */
+    #artwork{
+        width: auto;
+     
+        
+        #art-woman{
+            @include artWoman();
+            top:15%;
+            left:20%;
+            
+        }
+    
+        #art-pattern{
+            @include artPattern();
+            width:80%;
+            top:10%;
+            left:20%;
+    
+        }
+    }
+
+  }

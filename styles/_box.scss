@@ -1,0 +1,39 @@
+
+
+//desktop view
+#art-box{
+    // padding:0;
+    width:20%;
+    position:absolute;
+    left:-80px;
+    z-index: 2;
+    top:160px;
+  
+}
+
+////tablet view
+@media screen and (max-width: 768px) {
+    /* For tablet: */
+    #art-box{
+        width: 40%;
+        left:5%;
+        top:-15%;
+        margin:0;
+
+
+    }
+  }
+  
+  ///phone view
+@media screen and (max-width: 375px) {
+  /* For mobile phones: */
+  #art-box{
+    width:40%;
+    position:absolute;
+    left:25px;
+    z-index: 2;
+    top:-50px;
+
+
+  }
+}

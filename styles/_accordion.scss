@@ -1,0 +1,125 @@
+
+$accordion-button-icon:         url("../images/icon-arrow-down.svg");
+$questionFontWeight:700;
+$questionSelectedColor:hsl(238, 29%, 16%);
+$questionHoverOver:hsl(14, 88%, 65%);
+$headerColor:hsl(238, 29%, 16%);
+
+
+@mixin headerStyle{
+    font-family: 'Kumbh Sans', sans-serif;
+    color:$headerColor;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+@mixin fontStyle {
+    font-family: 'Kumbh Sans', sans-serif;
+    color:hsl(237, 12%, 33%);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+@mixin headerStyleinMobile (){
+    font-size: 25px;
+    text-align: center;
+}
+
+/////the arrow icon default style
+@mixin buttonIcon (){
+    display: block;
+    background-size:10px;
+    background-image: $accordion-button-icon; 
+    background-repeat: no-repeat;   
+    background-position-y: center;
+    background-position-x: center;
+    
+    }
+
+/////font default style
+.question,
+.text{
+    @include fontStyle();
+}
+
+
+.question:focus,
+.question:active{
+    box-shadow: none;
+    font-weight: $questionFontWeight;
+    color:$questionSelectedColor;
+    background-color: inherit !important;
+}
+.question:hover{
+    color:$questionHoverOver;
+}
+
+.accordion-button::after {
+    @include buttonIcon();
+    
+}
+.accordion-button[aria-expanded="true"]::after{
+    @include buttonIcon();
+}
+
+
+// desktop view
+
+#faq-container{
+    margin:40px auto;
+    display:inline;
+    width: 40%;
+}
+
+#header{
+ @include headerStyle();
+ margin-top:25px;
+ margin-bottom: 10px;
+ padding-left:20px;
+}
+
+///tablet view
+
+@media screen and (max-width: 768px) {
+    /* For tablet : */
+
+    #faq-container{
+        margin-top:30%;
+        margin-left:10%;
+        padding:10px;
+        width: 80%;
+        position: absolute;
+
+    }
+  
+    .question,
+    .text{
+    @include fontStyle();
+    font-size: 20px;
+}
+    #header{
+    @include headerStyleinMobile();
+   }  
+  
+  }
+  ///mobile phone view
+
+  @media screen and (max-width: 375px) {
+    /* For mobile phones: */
+
+    #faq-container{
+        width: 100%;
+        margin: 0;
+        margin-top:30%;
+
+    }
+    .question,
+    .text{
+    @include fontStyle();
+    font-size: 15px;
+}
+#header{
+    @include headerStyleinMobile();
+   }   
+  
+  }

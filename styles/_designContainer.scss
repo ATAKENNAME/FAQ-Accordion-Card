@@ -1,0 +1,54 @@
+
+
+/////default for design container
+@mixin designContainerSize {
+    // background-color: yellow;
+    padding:0;
+    margin:0;
+    width:auto;
+    height:auto;
+}
+
+/////desktop
+
+#design-container{
+    @include designContainerSize();
+    display:inline;
+    overflow: hidden;
+    position:relative;
+  
+}
+
+///////ipad
+
+@media screen and (max-width: 768px) {
+    /* For ipad phones: */
+
+    #design-container{
+        @include designContainerSize();
+        width: 100%;
+        position:relative;
+        bottom:30%;
+        left:-10%;
+
+      
+    }
+  
+  }
+
+  ///////mobile
+
+  @media screen and (max-width: 375px) {
+    /* For mobile phones: */
+
+    #design-container{
+        @include designContainerSize();
+        width: 100%;
+        position:relative;
+        bottom:33%;
+        left:-10%;
+
+      
+    }
+  
+  }
